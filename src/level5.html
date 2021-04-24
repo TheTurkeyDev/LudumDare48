@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LD 48</title>
+    <link rel="stylesheet" href="../res/css/level_5.css">
+</head>
+
+<body>
+    <!-- <iframe id="timer_iframe" src="timer.html"></iframe> -->
+    <div id="level">
+        <div class="grid">
+            <div id="layer-1" class="layer">
+                <div class="layer-content">
+                    <h2>Choose your pipe!</h2>
+                </div>
+                <a id="pipe-1-start" class="pipe-vert-red pipe-lip-2 pipe-bottom" href="#layer-5"></a>
+                <a id="pipe-2-start" class="pipe-vert-green pipe-lip-14 pipe-bottom" href="#layer-2"></a>
+            </div>
+
+            <div id="pipe-1" class="pipe-vert-red"></div>
+            <div id="pipe-2" class="pipe-vert-green"></div>
+
+            <div id="layer-2" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 2</h2>
+                </div>
+                <a id="pipe-3-start" class="pipe-vert-blue pipe-lip-12 pipe-bottom" href="#layer-4"></a>
+                <a id="pipe-2-end" class="pipe-vert-green pipe-lip-14 pipe-top" href="#layer-1"></a>
+            </div>
+
+            <!-- Pipe 3 Blue -->
+            <div id="pipe-3-uturn" class="pipe-uturn">
+                <div class="pipe-vert-blue pipe-u-1"></div>
+                <div class="pipe-corner-blue pipe-u-2"></div>
+                <div class="pipe-horz-blue pipe-u-3"></div>
+                <div class="pipe-corner-blue pipe-u-4 pipe-corner-3"></div>
+                <div class="pipe-vert-blue pipe-u-5"></div>
+            </div>
+            <div id="pipe-3" class="pipe-vert-blue"></div>
+
+            <div id="layer-3" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 3</h2>
+                </div>
+                <a id="pipe-4-start" class="pipe-vert-orange pipe-lip-17 pipe-bottom" href="#layer-4"></a>
+            </div>
+
+            <div id="pipe-4" class="pipe-vert-orange"></div>
+
+            <div id="layer-4" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 4</h2>
+                </div>
+                <a id="pipe-3-end" class="pipe-vert-blue pipe-lip-9 pipe-bottom" href="#layer-2"></a>
+                <a id="pipe-5-start" class="pipe-vert-purple pipe-lip-14 pipe-bottom" href="#layer-5"></a>
+                <a id="pipe-4-end" class="pipe-vert-orange pipe-lip-17 pipe-top" href="#layer-3"></a>
+            </div>
+
+            <div id="pipe-5" class="pipe-vert-purple"></div>
+            <input id="cb-1" class="lever" type="checkbox" />
+            <input id="cb-2" class="lever" type="checkbox" />
+            <div class="locked">
+                <a class="proceed-button" href="./level6.html">Next Level
+                    <div class="animated-underline"></div>
+                </a>
+            </div>
+
+
+            <div id="layer-5" class="layer">
+                <div class="layer-content">
+                    <p class="body-2 locked-text">Hit all the buttons to advance!</p>
+
+                </div>
+                <a id="pipe-1-end" class="pipe-vert-red pipe-lip-2 pipe-top" href="#layer-1"></a>
+                <a id="pipe-5-end" class="pipe-vert-purple pipe-lip-14 pipe-top" href="#layer-4"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

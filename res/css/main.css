@@ -1,3 +1,4 @@
+@import 'lever.css';
 :root {
     --bg: #282828;
     --bg_secondary: #1a1a1a;
@@ -9,12 +10,17 @@
     --blue_pipe_light: #4a88fb;
     --red_pipe_dark: #330101;
     --red_pipe_light: #f05454;
+    --purple_pipe_dark: #220027;
+    --purple_pipe_light: #aa1cc3;
+    --orange_pipe_dark: #441b00;
+    --orange_pipe_light: #fb912e;
     --grid_bottom: 3;
     --grid_top: 1;
 }
 
 html {
     /* overflow-y: hidden; */
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -30,16 +36,19 @@ h1, h2, h3 {
 .body-1 {
     font-size: 24px;
     color: var(--text-secondary);
+    margin: 0;
 }
 
 .body-2 {
     font-size: 20px;
     color: var(--text-secondary);
+    margin: 0;
 }
 
 .body-3 {
     font-size: 18px;
     color: var(--text-secondary);
+    margin: 0;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -57,10 +66,40 @@ h1, h2, h3 {
     border: none;
 }
 
+.proceed-button {
+    position: relative;
+    font-size: 32px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    width: fit-content;
+}
+
+.proceed-button::after {
+    content: ">";
+    margin-left: 12px;
+}
+
+.animated-underline {
+    width: 0;
+    height: 5px;
+    background: var(--text-secondary);
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    transition: 0.5s ease;
+}
+
+.proceed-button:hover>.animated-underline {
+    left: 0;
+    width: 100%;
+    background: var(--text-secondary);
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(21, 4.7vw);
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .layer {
@@ -76,6 +115,23 @@ h1, h2, h3 {
     grid-column: 1 / span 21;
 }
 
+#code-input {
+    background-color: var(--bg);
+    color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 3px;
+    line-height: 2em;
+    margin-top: 16px;
+    font-size: 1.5em;
+    outline: none;
+}
+
+#code-input:focus {
+    border: 2px solid var(--text);
+}
+
+/*===== Pipes ====*/
+
 .pipe-bottom, .pipe-top {
     height: 2vw;
     width: 7vw;
@@ -84,6 +140,11 @@ h1, h2, h3 {
 
 .pipe-bottom {
     align-self: end;
+    grid-row: var(--grid_bottom);
+}
+
+.pipe-top {
+    grid-row: var(--grid_top);
 }
 
 .pipe-corner-1 {
@@ -98,6 +159,8 @@ h1, h2, h3 {
     transform: rotate(270deg);
 }
 
+/*===== Green Pipe ====*/
+
 .pipe-vert-green {
     background: var(--green_pipe_dark);
     background: linear-gradient(90deg, var(--green_pipe_dark) 0%, var(--green_pipe_light) 69%, var(--green_pipe_dark) 100%);
@@ -110,6 +173,14 @@ h1, h2, h3 {
     background: linear-gradient(0deg, var(--green_pipe_dark) 0%, var(--green_pipe_light) 69%, var(--green_pipe_dark) 100%);
 }
 
+.pipe-corner-green {
+    height: 4.7vw;
+    background: var(--green_pipe_dark);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, var(--green_pipe_dark) 50%, var(--green_pipe_light) 84%, var(--green_pipe_dark) 100%);
+}
+
+/*===== Blue Pipe ====*/
+
 .pipe-vert-blue {
     background: var(--blue_pipe_dark);
     background: linear-gradient(90deg, var(--blue_pipe_dark) 0%, var(--blue_pipe_light) 69%, var(--blue_pipe_dark) 100%);
@@ -121,6 +192,14 @@ h1, h2, h3 {
     background: var(--blue_pipe_dark);
     background: linear-gradient(0deg, var(--blue_pipe_dark) 0%, var(--blue_pipe_light) 69%, var(--blue_pipe_dark) 100%);
 }
+
+.pipe-corner-blue {
+    height: 4.7vw;
+    background: var(--blue_pipe_dark);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, var(--blue_pipe_dark) 50%, var(--blue_pipe_light) 84%, var(--blue_pipe_dark) 100%);
+}
+
+/*===== Red Pipe ====*/
 
 .pipe-vert-red {
     background: var(--red_pipe_dark);
@@ -139,6 +218,158 @@ h1, h2, h3 {
     background: var(--red_pipe_dark);
     background: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, var(--red_pipe_dark) 50%, var(--red_pipe_light) 84%, var(--red_pipe_dark) 100%);
 }
+
+/*===== Purple Pipe ====*/
+
+.pipe-vert-purple {
+    background: var(--purple_pipe_dark);
+    background: linear-gradient(90deg, var(--purple_pipe_dark) 0%, var(--purple_pipe_light) 69%, var(--purple_pipe_dark) 100%);
+    z-index: 1;
+}
+
+.pipe-horz-purple {
+    height: 4.7vw;
+    background: var(--purple_pipe_dark);
+    background: linear-gradient(0deg, var(--purple_pipe_dark) 0%, var(--purple_pipe_light) 69%, var(--purple_pipe_dark) 100%);
+}
+
+.pipe-corner-purple {
+    height: 4.7vw;
+    background: var(--purple_pipe_dark);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, var(--purple_pipe_dark) 50%, var(--purple_pipe_light) 84%, var(--purple_pipe_dark) 100%);
+}
+
+/*===== Orange Pipe ====*/
+
+.pipe-vert-orange {
+    background: var(--orange_pipe_dark);
+    background: linear-gradient(90deg, var(--orange_pipe_dark) 0%, var(--orange_pipe_light) 69%, var(--orange_pipe_dark) 100%);
+    z-index: 1;
+}
+
+.pipe-horz-orange {
+    height: 4.7vw;
+    background: var(--orange_pipe_dark);
+    background: linear-gradient(0deg, var(--orange_pipe_dark) 0%, var(--orange_pipe_light) 69%, var(--orange_pipe_dark) 100%);
+}
+
+.pipe-corner-orange {
+    height: 4.7vw;
+    background: var(--orange_pipe_dark);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, var(--orange_pipe_dark) 50%, var(--orange_pipe_light) 84%, var(--orange_pipe_dark) 100%);
+}
+
+/* ===== Pipe Lips Columns ===== */
+
+.pipe-lip-1 {
+    grid-column: 1 / span 3;
+}
+
+.pipe-lip-2 {
+    grid-column: 2 / span 3;
+}
+
+.pipe-lip-3 {
+    grid-column: 3 / span 3;
+}
+
+.pipe-lip-4 {
+    grid-column: 4 / span 3;
+}
+
+.pipe-lip-5 {
+    grid-column: 5 / span 3;
+}
+
+.pipe-lip-6 {
+    grid-column: 6 / span 3;
+}
+
+.pipe-lip-7 {
+    grid-column: 7 / span 3;
+}
+
+.pipe-lip-8 {
+    grid-column: 8 / span 3;
+}
+
+.pipe-lip-9 {
+    grid-column: 9 / span 3;
+}
+
+.pipe-lip-10 {
+    grid-column: 10 / span 3;
+}
+
+.pipe-lip-11 {
+    grid-column: 11 / span 3;
+}
+
+.pipe-lip-12 {
+    grid-column: 12 / span 3;
+}
+
+.pipe-lip-13 {
+    grid-column: 13 / span 3;
+}
+
+.pipe-lip-14 {
+    grid-column: 14 / span 3;
+}
+
+.pipe-lip-15 {
+    grid-column: 15 / span 3;
+}
+
+.pipe-lip-16 {
+    grid-column: 16 / span 3;
+}
+
+.pipe-lip-17 {
+    grid-column: 17 / span 3;
+}
+
+.pipe-lip-18 {
+    grid-column: 18 / span 3;
+}
+
+.pipe-lip-19 {
+    grid-column: 19 / span 3;
+}
+
+.pipe-lip-20 {
+    grid-column: 20 / span 3;
+}
+
+/* ===== Pipe Uturn ===== */
+
+.pipe-uturn {
+    display: grid;
+    grid-template-columns: 4.7vw 4.7vw 4.7vw 4.7vw;
+    grid-template-rows: 40vh 20vh;
+}
+
+.pipe-u-1 {
+    grid-area: 1 / 1 / span 1/ span 1;
+}
+
+.pipe-u-2 {
+    grid-area: 2 / 1 / span 1/ span 1;
+}
+
+.pipe-u-3 {
+    grid-area: 2 / 2 / span 1/ span 2;
+}
+
+.pipe-u-4 {
+    grid-area: 2 / 4 / span 1/ span 1;
+}
+
+.pipe-u-5 {
+    grid-area: 1 / 4 / span 1/ span 1;
+}
+
+/* ===== Layers ===== */
 
 #layer-1 {
     grid-area: 1 / 1 / 2 / span 21;

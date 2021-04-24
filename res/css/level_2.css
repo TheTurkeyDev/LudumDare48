@@ -3,32 +3,8 @@
     grid-template-rows: minmax(20vh, auto) repeat(2, 200vh 20vh);
 }
 
-/* ===== Pipe 1 ===== */
-
-#pipe-1-start {
-    grid-row: var(--grid_bottom);
-    grid-column: 10 / span 3;
-}
-
-#pipe-1-end {
-    grid-row: var(--grid_top);
-    grid-column: 10 / span 3;
-}
-
 #pipe-1 {
     grid-area: 2 / 11 / 3 / 11;
-}
-
-/* ===== Pipe 2 ===== */
-
-#pipe-2-start {
-    grid-row: var(--grid_bottom);
-    grid-column: 10 / span 3;
-}
-
-#pipe-2-end {
-    grid-row: var(--grid_top);
-    grid-column: 10 / span 3;
 }
 
 #pipe-2 {
@@ -36,16 +12,6 @@
 }
 
 /* ===== Pipe 3 ===== */
-
-#pipe-3-start {
-    grid-row: var(--grid_bottom);
-    grid-column: 16 / span 3;
-}
-
-#pipe-3-end {
-    grid-row: var(--grid_bottom);
-    grid-column: 14 / span 3;
-}
 
 #pipe-3-uturn {
     grid-area: 4 / 15 / 4 / 17;

@@ -1,0 +1,89 @@
+.lever {
+    position: relative;
+    appearance: none;
+    height: 60px;
+    width: 20px;
+    background-color: #1f1f1f;
+    border: 2px solid #a7a7a7;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px red;
+}
+
+.lever:checked {
+    box-shadow: 0 0 0 2px #00ff00;
+}
+
+.lever:before, .lever:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.lever:before {
+    background: linear-gradient(90deg, rgba(82, 82, 82, 1) 0%, rgba(188, 188, 188, 1) 90%, rgba(162, 162, 162, 1) 100%);
+    border-radius: 12px;
+    width: 6px;
+    height: 24px;
+    transform-origin: 0% 85%;
+    animation: toggleHandleOn 2s;
+    transform: translate(5px, 8px) rotateX(180deg);
+    z-index: 1;
+}
+
+.lever:checked::before {
+    transform: translate(5px, 8px) rotateX(0deg);
+    animation: toggleHandleOff 2s;
+}
+
+.lever::after {
+    background: radial-gradient(circle, rgba(255, 103, 103, 1) 0%, rgba(201, 0, 0, 1) 100%);
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    animation: toggleOff 2s;
+    transform: translate(-4px, 44px);
+    z-index: 1;
+}
+
+.lever:checked::after {
+    animation: toggleOn 2s;
+    transform: translate(-4px, -12px);
+}
+
+@keyframes toggleOn {
+    from {
+        transform: translate(-4px, 44px);
+    }
+    to {
+        transform: translate(-4px, -12px);
+    }
+}
+
+@keyframes toggleOff {
+    from {
+        transform: translate(-4px, -12px);
+    }
+    to {
+        transform: translate(-4px, 44px);
+    }
+}
+
+@keyframes toggleHandleOn {
+    from {
+        transform: translate(5px, 8px) rotateX(0deg);
+    }
+    to {
+        transform: translate(5px, 8px) rotateX(180deg);
+    }
+}
+
+@keyframes toggleHandleOff {
+    from {
+        transform: translate(5px, 8px) rotateX(180deg);
+    }
+    to {
+        transform: translate(5px, 8px) rotateX(0deg);
+    }
+}
