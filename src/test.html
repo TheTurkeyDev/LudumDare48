@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LD 48</title>
+    <link rel="stylesheet" href="../res/css/level_2.css">
+    <style>
+        .lock+p {
+            display: none;
+        }
+
+        .lock:valid+p {
+            display: block;
+        }
+
+        .lock:valid {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input class="lock" type="text" pattern="^1234$" required />
+        <p>Hello!</p>
+    </div>
+</body>
+
+</html>

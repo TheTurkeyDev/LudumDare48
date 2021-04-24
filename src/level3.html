@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LD 48</title>
+    <link rel="stylesheet" href="../res/css/level_3.css">
+</head>
+
+<body>
+    <!-- <iframe id="timer_iframe" src="timer.html"></iframe> -->
+    <div id="level">
+        <div class="grid">
+            <div id="layer-1" class="layer">
+                <h2 class="layer-content">Choose your pipe!</h2>
+                <a id="pipe-1-start" class="pipe-bottom pipe-vert-green" href="#layer-2"></a>
+                <a id="pipe-2-start" class="pipe-bottom pipe-vert-red" href="#layer-4"></a>
+            </div>
+
+            <div id="pipe-1" class="pipe-vert-green"></div>
+            <div id="pipe-2" class="pipe-vert-red"></div>
+
+            <div id="layer-2" class="layer">
+                <a id="pipe-1-end" class="pipe-top pipe-vert-green" href="#layer-1"></a>
+                <h2 class="layer-content"> Layer 2</h2>
+                <a id="pipe-3-start" class="pipe-bottom pipe-vert-red" href="#layer-3"></a>
+                <a id="pipe-4-start" class="pipe-bottom pipe-vert-blue" href="#layer-4"></a>
+            </div>
+
+            <div id="pipe-3" class="pipe-vert-red"></div>
+            <div id="pipe-4" class="pipe-vert-blue"></div>
+
+            <div id="layer-3" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 3</h2>
+                    <span class="body-3 code">1234</span>
+                </div>
+
+                <a id="pipe-3-end" class="pipe-bottom pipe-vert-red" href="#layer-2"></a>
+            </div>
+
+            <div id="layer-4" class="layer">
+                <a id="pipe-2-end" class="pipe-top pipe-vert-red" href="#layer-1"></a>
+                <a id="pipe-4-end" class="pipe-top pipe-vert-blue" href="#layer-2"></a>
+                <div class="layer-content">
+                    <p class="body-2">Enter the code to proceed!</p>
+                    <input id="code-input" class="lock" type="text" pattern="^1234$" required />
+                    <a href="./level4.html">Next Level</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

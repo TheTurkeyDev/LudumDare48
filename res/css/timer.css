@@ -1,0 +1,100 @@
+.timer>span {
+    font-size: 24px;
+}
+
+.timer>.milis::before, .timer>.seconds::before, .timer>.minutes::before {
+    content: "0";
+    animation-name: timer-to-ten;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+}
+
+.timer>.milis::before {
+    animation-duration: 10ms;
+}
+
+.timer>.milis.tens::before {
+    animation-duration: 100ms;
+}
+
+.timer>.milis.hundreds::before {
+    animation-duration: 1s;
+}
+
+.timer>.seconds::before {
+    animation-duration: 10s;
+}
+
+.timer>.seconds.tens::before {
+    animation-name: timer-to-six;
+    animation-duration: 60s;
+}
+
+.timer>.minutes::before {
+    animation-duration: 600s;
+}
+
+.timer>.minutes.tens::before {
+    animation-name: timer-to-six;
+    animation-duration: 3600s;
+}
+
+@keyframes timer-to-ten {
+    0% {
+        content: '0';
+    }
+    10% {
+        content: '1';
+    }
+    20% {
+        content: '2';
+    }
+    30% {
+        content: '3';
+    }
+    40% {
+        content: '4';
+    }
+    50% {
+        content: '5';
+    }
+    60% {
+        content: '6';
+    }
+    70% {
+        content: '7';
+    }
+    80% {
+        content: '8';
+    }
+    90% {
+        content: '9';
+    }
+    100% {
+        content: '0';
+    }
+}
+
+@keyframes timer-to-six {
+    0% {
+        content: '0';
+    }
+    16.667% {
+        content: '1';
+    }
+    33.333% {
+        content: '2';
+    }
+    50% {
+        content: '3';
+    }
+    66.667% {
+        content: '4';
+    }
+    83.333% {
+        content: '5';
+    }
+    100% {
+        content: '6';
+    }
+}

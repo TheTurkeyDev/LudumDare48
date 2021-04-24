@@ -1,0 +1,94 @@
+@import 'main.css';
+.grid {
+    grid-template-rows: minmax(20vh, auto) repeat(3, 200vh 20vh);
+}
+
+/* ===== Pipe 1 ===== */
+
+#pipe-1-start {
+    grid-row: var(--grid_bottom);
+    grid-column: 10 / span 3;
+}
+
+#pipe-1-end {
+    grid-row: var(--grid_top);
+    grid-column: 10 / span 3;
+}
+
+#pipe-1 {
+    grid-area: 2 / 11 / 3 / 11;
+}
+
+/* ===== Pipe 2 ===== */
+
+#pipe-2-start {
+    grid-row: var(--grid_bottom);
+    grid-column: 2 / span 3;
+}
+
+#pipe-2-end {
+    grid-row: var(--grid_top);
+    grid-column: 2 / span 3;
+}
+
+#pipe-2 {
+    grid-area: 2 / 3 / 7 / 3;
+}
+
+/* ===== Pipe 3 ===== */
+
+#pipe-3-start {
+    grid-row: var(--grid_bottom);
+    grid-column: 16 / span 3;
+}
+
+#pipe-3-end {
+    grid-row: var(--grid_top);
+    grid-column: 16 / span 3;
+}
+
+#pipe-3 {
+    grid-area: 4 / 17 / 5 / 17;
+}
+
+/* ===== Pipe 4 ===== */
+
+#pipe-4-start {
+    grid-row: var(--grid_bottom);
+    grid-column: 5 / span 3;
+}
+
+#pipe-4-end {
+    grid-row: var(--grid_top);
+    grid-column: 5 / span 3;
+}
+
+#pipe-4 {
+    grid-area: 4 / 6 / 7 / 6;
+}
+
+/* ===== Lock =====*/
+
+.lock+a {
+    display: none;
+}
+
+.lock:valid+a {
+    display: block;
+}
+
+.lock:valid {
+    display: none;
+}
+
+.lock:valid~.lock-label {
+    display: none;
+}
+
+.code {
+    display: none;
+}
+
+#layer-3:target .code {
+    display: block;
+}

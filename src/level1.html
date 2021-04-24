@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LD 48</title>
+    <link rel="stylesheet" href="../res/css/level_1.css">
+</head>
+
+<body>
+    <!-- <iframe id="timer_iframe" src="timer.html"></iframe> -->
+    <div id="level_1">
+        <div class="grid">
+            <div id="layer-1" class="layer">
+                <div class="layer-content">
+                    <h1>Welcome to TO BE NAMED!</h1>
+                    <p class="body-1">The goal of this game is to get to the bottom of the webpage!</p>
+                    <p class="body-1">You do this by clicking on the pipes! Each time you click on a pipe, you will be
+                        transported to the other end of the pipe</p>
+                    <p class="body-1">Each start and end of a pipe exists on a "layer"</p>
+                    <p class="body-1">You want to visit layers via the pipes and slowly figure out where each goes and
+                        what
+                        pipes you need to get to the bottm</p>
+                    <p class="body-1">This entire game was made using only HTML and CSS!</p>
+                    <p class="body-1">Click on the lip of the pipe below to travel it!</p>
+                </div>
+                <a id="pipe-1-start" class="pipe-bottom pipe-vert-green" href="#layer-2"></a>
+            </div>
+
+            <div id="pipe-1" class="pipe-vert-green"></div>
+
+            <div id="layer-2" class="layer">
+                <a id="pipe-1-end" class="pipe-top pipe-vert-green" href="#layer-1"></a>
+                <div class="layer-content">
+                    <h1>You beat the level!</h1>
+                    <a href="./level2.html">Next Level</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
