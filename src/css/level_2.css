@@ -1,4 +1,4 @@
-@import 'main.css';
+@import url('./main.css');
 .grid {
     grid-template-rows: minmax(20vh, auto) repeat(2, 200vh 20vh);
 }

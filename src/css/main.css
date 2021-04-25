@@ -19,7 +19,7 @@
 }
 
 html {
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -49,6 +49,19 @@ h1, h2, h3 {
     font-size: 18px;
     color: var(--text-secondary);
     margin: 0;
+}
+
+.button {
+    background-color: var(--bg_secondary);
+    border: 2px solid var(--text);
+    border-radius: 10px;
+    padding: 8px 16px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    width: fit-content;
+    justify-self: center;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -97,14 +110,14 @@ h1, h2, h3 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(21, 4.7vw);
+    grid-template-columns: repeat(21, 1fr);
     overflow-y: hidden;
     overflow-x: hidden;
 }
 
 .layer {
     display: grid;
-    grid-template-columns: repeat(21, 4.7vw);
+    grid-template-columns: repeat(21, 1fr);
     grid-template-rows: 2vw 1fr 2vw;
     text-align: center;
     background-color: var(--bg_secondary);
@@ -345,7 +358,7 @@ h1, h2, h3 {
 
 .pipe-uturn {
     display: grid;
-    grid-template-columns: 4.7vw 4.7vw 4.7vw 4.7vw;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 40vh 20vh;
 }
 
@@ -397,4 +410,24 @@ h1, h2, h3 {
 
 #layer-7 {
     grid-area: 13 / 1 / 13 / span 21;
+}
+
+#layer-8 {
+    grid-area: 15 / 1 / 15 / span 21;
+}
+
+#layer-9 {
+    grid-area: 17 / 1 / 17 / span 21;
+}
+
+#layer-10 {
+    grid-area: 19 / 1 / 19 / span 21;
+}
+
+#layer-11 {
+    grid-area: 21 / 1 / 21 / span 21;
+}
+
+#layer-12 {
+    grid-area: 23 / 1 / 23 / span 21;
 }

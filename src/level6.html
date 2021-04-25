@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LD 48</title>
+    <link rel="stylesheet" href="./css/level_6.css">
+</head>
+
+<body>
+    <!-- <iframe id="timer_iframe" src="timer.html"></iframe> -->
+    <div id="level">
+        <div class="grid">
+            <div id="layer-1" class="layer">
+                <div class="layer-content">
+                    <h2>Choose your pipe!</h2>
+                </div>
+                <a id="pipe-1-start" class="pipe-vert-red pipe-lip-1 pipe-bottom" href="#layer-5"></a>
+                <a id="pipe-2-start" class="pipe-vert-purple pipe-lip-11 pipe-bottom" href="#layer-7"></a>
+            </div>
+
+            <div id="pipe-1" class="pipe-vert-red"></div>
+            <!-- Pipe 2 Purple -->
+            <div id="pipe-2-uturn" class="pipe-uturn">
+                <div class="pipe-vert-purple pipe-u-1"></div>
+                <div class="pipe-corner-purple pipe-u-2"></div>
+                <div class="pipe-horz-purple pipe-u-3"></div>
+                <div class="pipe-corner-purple pipe-u-4 pipe-corner-3"></div>
+                <div class="pipe-vert-purple pipe-u-5"></div>
+            </div>
+            <div id="pipe-2" class="pipe-vert-purple"></div>
+
+            <div id="layer-2" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 2</h2>
+                </div>
+                <a id="pipe-3-start" class="pipe-vert-orange pipe-lip-6 pipe-bottom" href="#layer-5"></a>
+                <a id="pipe-4-start" class="pipe-vert-purple pipe-lip-8 pipe-bottom" href="#layer-6"></a>
+                <a id="pipe-5-start" class="pipe-vert-green pipe-lip-14 pipe-bottom" href="#layer-3"></a>
+            </div>
+
+            <div id="pipe-3-uturn" class="pipe-uturn">
+                <div class="pipe-vert-orange pipe-u-1"></div>
+                <div class="pipe-corner-orange pipe-u-2"></div>
+                <div class="pipe-horz-orange pipe-u-3"></div>
+                <div class="pipe-corner-orange pipe-u-4 pipe-corner-3"></div>
+                <div class="pipe-vert-orange pipe-u-5"></div>
+            </div>
+            <div id="pipe-3" class="pipe-vert-orange"></div>
+            <div id="pipe-4" class="pipe-vert-purple"></div>
+            <div id="pipe-5" class="pipe-vert-green"></div>
+
+            <div id="layer-3" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 3</h2>
+                </div>
+                <a id="pipe-5-end" class="pipe-vert-green pipe-lip-14 pipe-top" href="#layer-2"></a>
+                <a id="pipe-6-start" class="pipe-vert-blue pipe-lip-16 pipe-bottom" href="#layer-4"></a>
+            </div>
+
+            <div id="pipe-6" class="pipe-vert-blue"></div>
+
+            <div id="layer-4" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 4</h2>
+                </div>
+                <a id="pipe-6-end" class="pipe-vert-blue pipe-lip-16 pipe-top" href="#layer-3"></a>
+                <a id="pipe-7-start" class="pipe-vert-red pipe-lip-18 pipe-bottom" href="#layer-5"></a>
+            </div>
+
+            <div id="pipe-7" class="pipe-vert-red"></div>
+
+            <div id="layer-5" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 5</h2>
+                </div>
+                <a id="pipe-1-end" class="pipe-vert-red pipe-lip-1 pipe-top" href="#layer-1"></a>
+                <a id="pipe-3-end" class="pipe-vert-orange pipe-lip-3 pipe-bottom" href="#layer-2"></a>
+                <a id="pipe-7-end" class="pipe-vert-red pipe-lip-18 pipe-top" href="#layer-4"></a>
+            </div>
+
+            <div id="layer-6" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 6</h2>
+                </div>
+                <a id="pipe-4-end" class="pipe-vert-purple pipe-lip-8 pipe-top" href="#layer-2"></a>
+            </div>
+
+            <div id="layer-7" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 7</h2>
+                </div>
+                <a id="pipe-8-start" class="pipe-vert-blue pipe-lip-2 pipe-bottom" href="#layer-12"></a>
+                <a id="pipe-2-end" class="pipe-vert-purple pipe-lip-8 pipe-bottom" href="#layer-1"></a>
+            </div>
+
+            <div id="pipe-8" class="pipe-vert-blue"></div>
+
+            <div id="layer-8" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 8</h2>
+                </div>
+                <a id="pipe-9-start" class="pipe-vert-purple pipe-lip-5 pipe-bottom" href="#layer-11"></a>
+                <a id="pipe-10-start" class="pipe-vert-orange pipe-lip-9 pipe-bottom" href="#layer-10"></a>
+                <a id="pipe-11-start" class="pipe-vert-blue pipe-lip-16 pipe-bottom" href="#layer-9"></a>
+            </div>
+
+            <div id="pipe-9" class="pipe-vert-purple"></div>
+            <div id="pipe-10" class="pipe-vert-orange"></div>
+            <div id="pipe-11-uturn" class="pipe-uturn">
+                <div class="pipe-vert-blue pipe-u-1"></div>
+                <div class="pipe-corner-blue pipe-u-2"></div>
+                <div class="pipe-horz-blue pipe-u-3"></div>
+                <div class="pipe-corner-blue pipe-u-4 pipe-corner-3"></div>
+                <div class="pipe-vert-blue pipe-u-5"></div>
+            </div>
+            <div id="pipe-11" class="pipe-vert-blue"></div>
+
+            <div id="layer-9" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 9</h2>
+                </div>
+                <a id="pipe-11-end" class="pipe-vert-blue pipe-lip-13 pipe-bottom" href="#layer-8"></a>
+            </div>
+
+            <div id="layer-10" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 10</h2>
+                </div>
+                <a id="pipe-10-end" class="pipe-vert-orange pipe-lip-9 pipe-top" href="#layer-8"></a>
+                <a id="pipe-12-start" class="pipe-vert-red pipe-lip-12 pipe-bottom" href="#layer-12"></a>
+                <a id="pipe-13-start" class="pipe-vert-green pipe-lip-18 pipe-bottom" href="#layer-11"></a>
+            </div>
+
+            <div id="pipe-12" class="pipe-vert-red"></div>
+            <div id="pipe-13" class="pipe-vert-green"></div>
+
+            <div id="layer-11" class="layer">
+                <div class="layer-content">
+                    <h2>Layer 11</h2>
+                </div>
+                <a id="pipe-9-end" class="pipe-vert-purple pipe-lip-5 pipe-top" href="#layer-8"></a>
+                <a id="pipe-13-end" class="pipe-vert-green pipe-lip-18 pipe-top" href="#layer-10"></a>
+            </div>
+
+            <input id="cb-1" class="lever" type="checkbox" />
+            <input id="cb-2" class="lever" type="checkbox" />
+            <input id="cb-3" class="lever" type="checkbox" />
+            <div class="locked">
+                <a class="proceed-button" href="./level7">Next Level
+                    <div class="animated-underline"></div>
+                </a>
+            </div>
+
+
+            <div id="layer-12" class="layer">
+                <div class="layer-content">
+                    <p class="body-2 locked-text">Hit all the buttons to advance!</p>
+                </div>
+                <a id="pipe-8-end" class="pipe-vert-blue pipe-lip-2 pipe-top" href="#layer-7"></a>
+                <a id="pipe-12-end" class="pipe-vert-red pipe-lip-12 pipe-top" href="#layer-10"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

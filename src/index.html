@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LD 48</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        #main-grid {
+            display: grid;
+            gap: 16px;
+            grid-template-rows: auto auto auto auto auto auto;
+        }
+
+        #level-select-btn {
+            appearance: none;
+            justify-self: center;
+            margin: 10px 0;
+        }
+
+        #level-select-btn::before {
+            content: "Level Select";
+            background-color: var(--bg_secondary);
+            border: 2px solid var(--text);
+            border-radius: 10px;
+            padding: 8px 16px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        #level-select-div {
+            grid-auto-flow: column;
+            gap: 16px;
+            width: fit-content;
+            justify-self: center;
+            display: none;
+        }
+
+        #level-select-btn:checked+#level-select-div {
+            display: grid;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <div id="main-grid">
+        <h1>Welcome to Scriptless Pipes!</h1>
+        <h3 class="body-1" style="margin-bottom: 32px;">This entire game was made using only HTML and CSS!</h3>
+        <div>
+            <p class="body-1">The goal of this game is to get to the bottom of the webpage!</p>
+            <p class="body-1">You do this by clicking on the pipes! Each time you click on a pipe, you will be
+                transported to the other end of the pipe.</p>
+            <p class="body-1">Each start and end of a pipe exists on a "layer".</p>
+            <p class="body-1">You want to visit layers via the pipes and slowly figure out where each goes and
+                what pipes you need to get to the bottom.</p>
+            <p class="body-1">This game is playable on mobile, but I recommend playing in landscape mode, or else things
+                might get too bunched together</p>
+        </div>
+        <a class="button" href="/level1">Start</a>
+        <input type="checkbox" id="level-select-btn" />
+        <div id="level-select-div">
+            <a class="button" href="/level1">Level 1</a>
+            <a class="button" href="/level2">Level 2</a>
+            <a class="button" href="/level3">Level 3</a>
+            <a class="button" href="/level4">Level 4</a>
+            <a class="button" href="/level5">Level 5</a>
+            <a class="button" href="/level6">Level 6</a>
+            <a class="button" href="/level7">Level 7</a>
+        </div>
+    </div>
+</body>
+
+</html>

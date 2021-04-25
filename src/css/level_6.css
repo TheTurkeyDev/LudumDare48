@@ -1,0 +1,119 @@
+@import 'main.css';
+.grid {
+    grid-template-rows: minmax(20vh, auto) repeat(11, 200vh 20vh);
+}
+
+#pipe-1 {
+    grid-area: 2 / 2 / span 7 / span 1;
+}
+
+#pipe-2 {
+    grid-area: 2 / 12 / span 12 / span 1;
+}
+
+#pipe-2-uturn {
+    grid-area: 14 / 9 / span 1 / span 4;
+}
+
+#pipe-3 {
+    grid-area: 4 / 7 / span 6 / span 1;
+}
+
+#pipe-3-uturn {
+    grid-area: 10 / 4 / span 1 / span 4;
+}
+
+#pipe-4 {
+    grid-area: 4 / 9 / span 7 / span 1;
+}
+
+#pipe-5 {
+    grid-area: 4 / 15 / span 1 / span 1;
+}
+
+#pipe-6 {
+    grid-area: 6 / 17 / span 1 / span 1;
+}
+
+#pipe-7 {
+    grid-area: 8 / 19 / span 1 / span 1;
+}
+
+#pipe-8 {
+    grid-area: 14 / 3 / span 9 / span 1;
+}
+
+#pipe-9 {
+    grid-area: 16 / 6 / span 5 / span 1;
+}
+
+#pipe-10 {
+    grid-area: 16 / 10 / span 3 / span 1;
+}
+
+#pipe-11 {
+    grid-area: 16 / 17 / span 2 / span 1;
+}
+
+#pipe-11-uturn {
+    grid-area: 18 /14 / span 1 / span 4;
+}
+
+#pipe-12 {
+    grid-area: 20 / 13 / span 3 / span 1;
+}
+
+#pipe-13 {
+    grid-area: 20 / 19 / span 1 / span 1;
+}
+
+/* ===== Lock =====*/
+
+#cb-1 {
+    grid-column: 11;
+    grid-row: 5;
+    align-self: end;
+    justify-self: center;
+}
+
+#cb-2 {
+    grid-column: 11;
+    grid-row: 13;
+    align-self: end;
+    justify-self: center;
+}
+
+#cb-3 {
+    grid-column: 11;
+    grid-row: 21;
+    align-self: end;
+    justify-self: center;
+}
+
+div.locked {
+    display: none;
+    grid-area: 23 / 10 / span 1 / span 3;
+    z-index: 1;
+    align-content: center;
+    justify-content: center;
+}
+
+#cb-1:checked+#cb-2:checked+#cb-3:checked+.locked {
+    display: grid;
+}
+
+.lever {
+    display: none;
+}
+
+#layer-3:target~#cb-1 {
+    display: block;
+}
+
+#layer-7:target~#cb-2 {
+    display: block;
+}
+
+#layer-11:target~#cb-3 {
+    display: block;
+}
