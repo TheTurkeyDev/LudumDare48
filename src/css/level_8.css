@@ -1,0 +1,70 @@
+@import 'main.css';
+.grid {
+    grid-template-rows: minmax(20vh, auto) repeat(6, 200vh 20vh);
+}
+
+#pipe-1-uturn {
+    grid-area: 6 / 2 / span 1 / span 4;
+}
+
+#pipe-1 {
+    grid-area: 2 / 5 / span 4 / span 1;
+}
+
+#pipe-2 {
+    grid-area: 2 / 10 / span 1 / span 1;
+}
+
+#pipe-3 {
+    grid-area: 4 / 18 / span 1 / span 1;
+}
+
+#pipe-4 {
+    grid-area: 6 / 8 / span 5 / span 1;
+}
+
+#pipe-5 {
+    grid-area: 8 / 14 / span 3 / span 1;
+}
+
+#pipe-6-uturn {
+    grid-area: 12 / 13 / span 1 / span 4;
+}
+
+#pipe-6 {
+    grid-area: 10 / 16 / span 2 / span 1;
+}
+
+#pipe-7 {
+    grid-area: 10 / 20 / span 3 / span 1;
+}
+
+#pipe-8 {
+    grid-area: 12 / 2 / span 1 / span 1;
+}
+
+/* ===== Lock =====*/
+
+#cb-1 {
+    grid-row: 5;
+}
+
+#cb-2 {
+    grid-row: 7;
+}
+
+#cb-3 {
+    grid-row: 9;
+}
+
+#cb-4 {
+    grid-row: 11;
+}
+
+#cb-1:checked+#cb-2:not(:checked)+#cb-3:checked+#cb-4:checked+.locked {
+    display: grid;
+}
+
+#layer-3:target~#cb-1, #layer-7:target~#cb-2, #layer-11:target~#cb-3 {
+    display: block;
+}

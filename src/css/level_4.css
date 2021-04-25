@@ -51,32 +51,8 @@
     grid-area: 12 / 15 / span 1 / span 1;
 }
 
-/* ===== Lock =====*/
+/* ===== Lock ===== */
 
-.lock+a {
-    display: none;
-}
-
-.lock:valid+a {
-    display: inline;
-}
-
-.lock:valid {
-    display: none;
-}
-
-.lock:valid~.lock-label {
-    display: none;
-}
-
-.code {
-    display: none;
-}
-
-#layer-3:target .code {
-    display: block;
-}
-
-#layer-5:target .code {
+#layer-3:target~#code-1, #layer-5:target~#code-2 {
     display: block;
 }

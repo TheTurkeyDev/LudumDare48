@@ -30,25 +30,15 @@
 /* ===== Lock =====*/
 
 #cb-1 {
-    grid-column: 11;
     grid-row: 3;
-    align-self: end;
-    justify-self: center;
 }
 
 #cb-2 {
-    grid-column: 11;
     grid-row: 5;
-    align-self: end;
-    justify-self: center;
 }
 
 div.locked {
-    display: none;
     grid-area: 9 / 10 / span 1 / span 3;
-    z-index: 1;
-    align-content: center;
-    justify-content: center;
 }
 
 #cb-1:checked+#cb-2:checked+.locked-text {
@@ -59,14 +49,6 @@ div.locked {
     display: grid;
 }
 
-.lever {
-    display: none;
-}
-
-#layer-2:target~#cb-1 {
-    display: block;
-}
-
-#layer-3:target~#cb-2 {
+#layer-2:target~#cb-1, #layer-3:target~#cb-2 {
     display: block;
 }

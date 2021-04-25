@@ -31,46 +31,22 @@
     grid-area: 8 / 8 / span 1 / span 1;
 }
 
-/* ===== Lock =====*/
-
-.proceed-button, .lock:invalid+.lock {
-    display: none;
-}
-
-.lock:valid+.lock:invalid {
-    display: inline;
-}
-
-.lock:valid+.proceed-button {
-    display: inline;
-}
-
-.lock:valid {
-    display: none;
-}
-
-/* ===== Codes ==== */
-
-.code {
-    display: none;
-}
-
-#layer-2:target .code {
+#layer-2:target #code-1 {
     display: block;
 }
 
-#layer-3:target .code {
+#layer-3:target #code-2 {
     display: block;
 }
 
-#layer-4:target .code {
+#layer-4:target #code-3 {
     display: block;
 }
 
-#layer-5:target .code {
+#layer-5:target #code-4 {
     display: block;
 }
 
-#layer-6:target .code {
+#layer-6:target #code-5 {
     display: block;
 }

@@ -128,7 +128,7 @@ h1, h2, h3 {
     grid-column: 1 / span 21;
 }
 
-#code-input {
+.code-input {
     background-color: var(--bg);
     color: var(--text);
     border: 2px solid var(--text);
@@ -139,7 +139,7 @@ h1, h2, h3 {
     outline: none;
 }
 
-#code-input:focus {
+.code-input:focus {
     border: 2px solid var(--text);
 }
 
@@ -430,4 +430,28 @@ h1, h2, h3 {
 
 #layer-12 {
     grid-area: 23 / 1 / 23 / span 21;
+}
+
+/* ===== Locks, codes, and Levers ===== */
+
+div.locked {
+    display: none;
+    z-index: 1;
+    align-content: center;
+    justify-content: center;
+}
+
+.code, .locked, .lock:invalid+.lock, .lock:valid {
+    display: none;
+}
+
+.lock:valid+.lock:invalid, .lock:valid+.locked {
+    display: inline;
+}
+
+.lever {
+    display: none;
+    grid-column: 11;
+    align-self: end;
+    justify-self: center;
 }
