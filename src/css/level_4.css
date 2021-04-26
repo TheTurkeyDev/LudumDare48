@@ -53,6 +53,6 @@
 
 /* ===== Lock ===== */
 
-#layer-3:target~#code-1, #layer-5:target~#code-2 {
+#layer-3:target #code-1, #layer-5:target #code-2 {
     display: block;
 }

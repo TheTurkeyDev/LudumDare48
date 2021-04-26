@@ -45,6 +45,10 @@
 
 /* ===== Lock =====*/
 
+div.locked {
+    grid-area: 13 / 10 / span 1 / span 3;
+}
+
 #cb-1 {
     grid-row: 5;
 }
@@ -66,5 +70,21 @@
 }
 
 #layer-3:target~#cb-1, #layer-7:target~#cb-2, #layer-11:target~#cb-3 {
+    display: block;
+}
+
+#layer-3:target~#cb-1 {
+    display: block;
+}
+
+#layer-4:target~#cb-2 {
+    display: block;
+}
+
+#layer-5:target~#cb-3 {
+    display: block;
+}
+
+#layer-6:target~#cb-4 {
     display: block;
 }
